@@ -1,8 +1,8 @@
 * {padding: 0;margin: 0;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
 html, body {width: 100%;background: rgb(34, 34, 34);font-family: 'Play';font-size: 16px;overflow-x: hidden;text-aling: justify;}
-.header {background: rgb(34, 34, 34);padding-left: 46px;padding-top: 46px;position: fixed;height: auto;width: 20%;z-index: 5;top: -3%;font-size: 14px;}
+.header {background: rgb(34, 34, 34);padding-left: 46px;padding-right: 1%;padding-top: 46px;position: fixed;height: auto;width: 20%;z-index: 5;top: -3%;font-size: 14px;}
 .logo_cyberd {width: 92px;height: 37px;object-fit: contain;margin-top: 10%;margin-bottom: 10%;}
-.main-content {width: 80%;background: rgb(34, 34, 34);height: 100%;margin-left: 20%;padding-left: 5%;border-left: dashed 1px rgba(248, 247, 247, 0.3);}
+.main-content {width: 65%;background: rgb(34, 34, 34);height: 100%;margin-left: 20%;padding-left: 8%;border-left: dashed 1px rgba(248, 247, 247, 0.3);}
 .header .main-nav ul {list-style: none;}
 .header .main-nav ul li {padding-bottom: 8px;}
 .header .main-nav ul li a {
