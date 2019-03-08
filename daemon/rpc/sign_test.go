@@ -100,3 +100,35 @@ func TestStdTxMarshaling(t *testing.T) {
 	log.Println(stdTxBytes)
 	return
 }
+
+func TestStdTxUnmarshaling(t *testing.T) {
+
+	rawTx := []byte{}
+
+	stdTx := auth.StdTx{}
+	err := codec.UnmarshalBinaryLengthPrefixed(rawTx, &stdTx)
+	if err != nil {
+		panic(err)
+	}
+	return
+}
+
+func TestAddressMarshaling(t *testing.T) {
+
+	address, _ := sdk.AccAddressFromBech32("cyber18va0xrvy5wjv46g8a3wc3f444lky2v96ch6cst")
+	marshaledAddress, err := codec.MarshalBinaryLengthPrefixed(address)
+	if err != nil {
+		panic(err)
+	}
+	log.Println(marshaledAddress)
+	return
+}
+
+func TestCoinMarshaling(t *testing.T) {
+	coin := sdk.NewInt64Coin("cyb", 10000)
+	marshaledCoin, err := codec.MarshalBinaryLengthPrefixed(coin)
+	if err != nil {
+		panic(err)
+	}
+	log.Println(marshaledCoin)
+}
