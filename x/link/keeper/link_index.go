@@ -27,7 +27,7 @@ type LinkIndexedKeeper struct {
 }
 
 func NewLinkIndexedKeeper(keeper LinkKeeper) *LinkIndexedKeeper {
-	merkleTree := merkle.NewTree(sha256.New(), true)
+	merkleTree := merkle.NewTree(sha256.New(), false)
 
 	return &LinkIndexedKeeper{LinkKeeper: keeper, MerkleTree: merkleTree}
 }

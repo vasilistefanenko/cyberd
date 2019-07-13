@@ -2,7 +2,7 @@ package bandwidth
 
 const (
 	// Maximum bandwidth of network
-	DesirableNetworkBandwidthForRecoveryPeriod = LinkMsgCost * 2000 * 1000
+	DesirableNetworkBandwidthForRecoveryPeriod = LinkMsgCost * 25000000
 
 	// Bandwidth cost of specific messages and tx itself
 	LinkMsgCost    int64 = 100

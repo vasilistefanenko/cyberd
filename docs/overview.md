@@ -1,4 +1,4 @@
-# ://cyber staking and distribution overview
+# ://cyberd application params
 
 ## Params
 
@@ -8,22 +8,26 @@
 | Staking     | MaxValidators | 146           | maximum number of active validators set |
 | Staking     | MaxEntries    | 7             | max entries for either unbonding delegation or redelegation per delegator/validator pair(delegator/validator/validator for redelegation)|
 |             |               |       |                                  |
-| Consensus   | MaxBytes      | 1mb   | block max bytes limit            |
 |             |                  |       |                                 |
 | Rank        | RankCalcWindow   | 100   | full rank recalculation window  |
 |             |                     |     |                                                                        |
-| Distr       | CommunityTax        | 0%  | community funding tax, not used                                        |
-| Distr       | BaseProposerReward  | 1%  | % of block inflation goes to proposer                                  |
-| Distr       | BonusProposerReward | 4%  | addition reward, calculated as % of included votes from validators set |
+| Distr       | CommunityTax        | 10%  | % block rewards goes to the community pool|
+| Distr       | BaseProposerReward  | 1%  | % of block rewards goes to proposer                                  |
+| Distr       | BonusProposerReward | 4%  | addition reward, calculated as % of included precommits the proposer includes |
 |             |                          |                   |                                                |
 | Slashing    | MaxEvidenceAge           | 3weeks            | misbehaviour evidence max age                  |
 | Slashing    | SignedBlocksWindow       | 30min             | window to calculate validators liveness        |
-| Slashing    | MinSignedPerWindow       | 70%               | min singed block for window to not be jailed   |
+| Slashing    | MinSignedPerWindow       | 70%               | min singed precommits for window to not be jailed   |
 | Slashing    | DowntimeJailDuration     | 0                 | unjail delay                                   |
 | Slashing    | SlashFractionDoubleSign  | 20%               | % of stake reduction for double sign           |
-| Slashing    | SlashFractionDowntime    | 0.1%                | % of stake reduction for being offline         |
-|             |                 |                   |                              |
-| Mint        | TokensPerBlock  | 0.634195840 Gcyb  | validators block rewards     |
+| Slashing    | SlashFractionDowntime    | 0.05%                | % of stake reduction for being offline         |
+|             |                          |                   |                              |
+| Mint        | Inflation                | 7% | |
+| Mint        | InflationRateChange      | 13% | |
+| Mint        | InflationMax             | 18% | |
+| Mint        | InflationMin             | 5% | |
+| Mint        | GoalBonded               | 88% | |
+| Mint        | BlocksPerYear            | 60 * 60 * 8766 / 5 | Assuming 5 second block times |
 |             |                               |                             |                                                            |
 | Bandwidth   | RecoveryWindow                | 24h                         | from 0 to max recovery period                              |
 | Bandwidth   | PriceSlidingWindow            | 24h                         | price calculated based on network load for selected period |
@@ -32,8 +36,20 @@
 | Bandwidth   | LinkCost                      | 100                         | link msg cost                                              |
 | Bandwidth   | NonLinkCost                   | 5 * LinkCost                | link msg cost                                              |
 | Bandwidth   | TxCost                        | 3 * LinkCost                | tx cost                                                    |
-| Bandwidth   | RecoveryWindowTotalBandwidth  | 2000 * 1000* LinkCost       | how much all users in average can spend for recover period |                                                           |
+| Bandwidth   | RecoveryWindowTotalBandwidth  | 25000000 * LinkCost       | how much all users in average can spend for recover period |                                                           |
 
+# ://cyberd consensus params
+
+| Param         | Value         | Comment                                 |
+|---------------|---------------|-----------------------------------------|
+| MaxBytes      | 1mb   | block max bytes limit            |
+| TimeoutPropose | 2s | |
+| TimeoutProposeDelta | 500ms | |
+| TimeoutPrevote | 1s | |
+| TimeoutPrevoteDelta | 500ms | |
+| TimeoutPrecommit | 1s | |
+| TimeoutPrecommitDelta | 500ms | |
+| TimeoutCommit | 1s | |
 
 
 ## Staking

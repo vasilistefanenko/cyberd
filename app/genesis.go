@@ -134,12 +134,12 @@ func NewDefaultGenesisState() GenesisState {
 				DowntimeJailDuration:    0,
 				MinSignedPerWindow:      sdk.NewDecWithPrec(70, 2),           // 70%
 				SlashFractionDoubleSign: sdk.NewDecWithPrec(20, 2),           // 20%
-				SlashFractionDowntime:   sdk.NewDec(1).Quo(sdk.NewDec(1000)), // 0.1%
+				SlashFractionDowntime:   sdk.NewDec(5).Quo(sdk.NewDec(10000)), // 0.05%
 			},
 		},
 		DistrData: distr.GenesisState{
 			FeePool:             distr.InitialFeePool(),
-			CommunityTax:        sdk.NewDecWithPrec(0, 2), // 0%
+			CommunityTax:        sdk.NewDecWithPrec(10, 2), // 10%
 			BaseProposerReward:  sdk.NewDecWithPrec(1, 2), // 1%
 			BonusProposerReward: sdk.NewDecWithPrec(4, 2), // 4%
 			WithdrawAddrEnabled: true,
