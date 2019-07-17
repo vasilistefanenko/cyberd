@@ -8,6 +8,8 @@ headless: true
   - [CLI guide]({{< relref "/docs/cyberd/ultimate-commands-guide_v2.md" >}})
   - [Get CYBs]({{< relref "/docs/cyberd/get_CYB.md" >}})
   - [Port forwarding]({{< relref "/docs/cyberd/port_forwarding_guide.md" >}})
+  - [Multisig Guide]({{< relref "/docs/cyberd/multisig_guide.md" >}})
+  - [Keystore managment guide]({{< relref "/docs/cyberd/keystore.md" >}})
 - Dev environment:
   - [Setup development environment]({{< relref "/docs/cyberd/setup_dev_env.md" >}})
   - [Network launch]({{< relref "/docs/cyberd/launch_network.md" >}})
